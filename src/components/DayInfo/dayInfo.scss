@@ -1,0 +1,50 @@
+@import "../../styles/variables.scss";
+.day-weather_block_second {
+  width: 750px;
+  position: relative;
+
+  .cloud-icon {
+    position: absolute;
+    right: 0;
+    z-index: 1;
+  }
+
+  .weather-item-wrapper {
+    z-index: 2;
+    margin: 42px 0 42px 32px;
+
+    .weather-item {
+      display: flex;
+      align-items: center;
+
+      &:nth-child(odd),
+      &:nth-child(2){
+        margin-bottom: 24px;
+      }
+
+      .weather-item__icon-block {
+        width: 38px;
+        height: 38px;
+        background: $white;
+        box-shadow: 1px 4px 10px -1px rgb(71 147 255 / 20%);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .weather-item__icon_lower{
+          margin-top: 10px;
+        }
+      }
+
+      .weather-item__name {
+        margin: 0 20px ;
+        color: $light-grey;
+      }
+
+      .weather-item__value {
+        margin: 0 ;
+      }
+    }
+  }
+}

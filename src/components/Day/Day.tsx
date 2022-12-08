@@ -1,4 +1,6 @@
 import {GlobalSvgSelector} from "../../assets/icons/global/GlobalSvgSelector";
+import {DayInfo} from "../DayInfo/DayInfo";
+
 import './day.scss'
 
 export const Day = () => {
@@ -14,9 +16,7 @@ export const Day = () => {
                     </div>
                     <GlobalSvgSelector id={"weather-day"} />
                 </div>
-                <div className="day-weather day-weather_block_second">
-
-                </div>
+                <DayInfo />
             </div>
         </div>
     )
