@@ -1,0 +1,57 @@
+@import '../../styles/variables.scss';
+
+.day-weather-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  .day-weather {
+    display: flex;
+    background: $white;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+    border-radius: 20px;
+    height: 300px;
+  }
+
+  .day-weather_block_first {
+    width: 400px;
+
+    .day-weather-info {
+      margin-left: 20px;
+
+      .day-weather-info__temperature {
+        color: $blue;
+        font-weight: 500;
+        font-size: 96px;
+        line-height: 117px;
+        margin: 0 0;
+      }
+
+      .day-weather-info__day {
+        font-size: 40px;
+        line-height: 49px;
+        color: $black;
+        margin: 0 0 31px;
+      }
+
+      .day-weather-info__time {
+        font-size: 25px;
+        line-height: 30px;
+        color: $light-grey;
+        margin: 0 0 14px;
+      }
+
+      .day-weather-info__city {
+        @extend .day-weather-info__time;
+        margin: 0 0 20px;
+      }
+    }
+
+    .day-weather-icon {
+      margin: 46px 0 0 43px;
+    }
+  }
+
+  .day-weather_block_second {
+    width: 750px;
+  }
+}

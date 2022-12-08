@@ -1,0 +1,19 @@
+@import "variables.scss";
+@import "~normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0px auto;
+}

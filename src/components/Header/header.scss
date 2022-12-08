@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 30px ;
+
+    .header-block {
+      @extend .header-wrapper;
+      align-items: center;
+
+      .header-title {
+        color: $blue;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 65px;
+        text-transform: uppercase;
+        margin-left: 20px;
+      }
+
+      .header-theme-color {
+        margin-right: 26px;
+      }
+    }
+  }
+
