@@ -1,7 +1,7 @@
-import {WeatherSvgSelector} from "../../assets/icons/weather/WeahertSvgSelector";
+import {WeatherSvgSelector} from "../../../assets/icons/weather/WeahertSvgSelector";
 import {DayInfoItem} from "./DayInfoItem";
 
-import cloud from "../../assets/image/cloud.png";
+import cloud from "../../../assets/image/cloud.png";
 
 import "./dayInfo.scss"
 

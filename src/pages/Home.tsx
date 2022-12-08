@@ -8,7 +8,7 @@ export const HomePage = () => {
                 <Header />
             </header>
             <main>
-                <Day />
+                <Day/>
             </main>
         </>
     )

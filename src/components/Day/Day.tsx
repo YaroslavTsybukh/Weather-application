@@ -1,5 +1,5 @@
 import {GlobalSvgSelector} from "../../assets/icons/global/GlobalSvgSelector";
-import {DayInfo} from "../DayInfo/DayInfo";
+import {DayInfo} from "./DayInfo/DayInfo";
 
 import './day.scss'
 

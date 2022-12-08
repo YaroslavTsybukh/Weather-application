@@ -1,5 +1,5 @@
 import {WeatherInfo} from "./DayInfo";
-import {WeatherSvgSelector} from "../../assets/icons/weather/WeahertSvgSelector";
+import {WeatherSvgSelector} from "../../../assets/icons/weather/WeahertSvgSelector";
 
 interface Prop {
     weather: WeatherInfo
