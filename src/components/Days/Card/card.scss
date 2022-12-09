@@ -1,0 +1,43 @@
+@import "../../../styles/variables.scss";
+
+.days-weather-info {
+  width: 149px;
+  height: 200px;
+  background: rgba(71, 147, 255, 0.2);
+  border-radius: 10px;
+  margin-right: 20px;
+
+  .days-weather-info__day {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: $black;
+    margin: 11px 0 7px 11px;
+  }
+
+  .days-weather-info__date {
+    line-height: 17px;
+    color: $light-grey;
+    margin: 0 0 12px 11px;
+  }
+
+  .days-weather-info__icon {
+    margin: 0 0 15px 11px;
+  }
+
+  .days-weather-info__temp-day {
+    @extend .days-weather-info__day;
+    margin: 0 0 0 11px;
+  }
+
+  .days-weather-info__temp-night {
+    font-size: 13px;
+    line-height: 16px;
+    color: $light-grey;
+    margin: 0 0 6px 11px;
+  }
+
+  .days-weather-info__title {
+    @extend .days-weather-info__temp-night;
+  }
+}

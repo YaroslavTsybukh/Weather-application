@@ -1,0 +1,11 @@
+@import "../../styles/variables.scss";
+
+.days-weather {
+  display: flex;
+  margin-bottom: 20px;
+  padding: 20px 0 20px 19px;
+  height: 240px;
+  background: $white;
+  box-shadow: 2px 5px 25px -3px rgb(180 180 180 / 25%);
+  border-radius: 0 0 20px 20px;
+}

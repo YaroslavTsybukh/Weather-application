@@ -5,7 +5,7 @@ import './day.scss'
 
 export const Day = () => {
     return(
-        <div className={"container"}>
+        <div className="container">
             <div className="day-weather-wrapper">
                 <div className="day-weather day-weather_block_first">
                     <div className="day-weather-info">

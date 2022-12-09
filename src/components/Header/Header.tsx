@@ -24,11 +24,11 @@ export const Header = () => {
             <div className="header-wrapper">
                 <div className="header-block">
                     <GlobalSvgSelector id={"header-logo"} />
-                    <div className="header-title">React weather</div>
+                    <div className="header-block__title">React weather</div>
                 </div>
                 <div className="header-block">
-                    <GlobalSvgSelector id="theme-color" />
-                    <Select options={options} styles={colorStyles} className="header-select-city"/>
+                    <GlobalSvgSelector id={"theme-color"} />
+                    <Select options={options} styles={colorStyles} className="header-block__select-city" />
                 </div>
             </div>
         </div>

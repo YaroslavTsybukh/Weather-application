@@ -9,7 +9,7 @@
       @extend .header-wrapper;
       align-items: center;
 
-      .header-title {
+      .header-block__title {
         color: $blue;
         font-weight: 700;
         font-size: 25px;
@@ -18,8 +18,12 @@
         margin-left: 20px;
       }
 
-      .header-theme-color {
+      .header-block__theme-color {
         margin-right: 26px;
+      }
+
+      .header-block__select-city {
+        z-index: 3;
       }
     }
   }

@@ -1,5 +1,6 @@
 import {Header} from "../components/Header/Header";
 import {Day} from "../components/Day/Day"
+import {Days} from "../components/Days/Days"
 
 export const HomePage = () => {
     return (
@@ -9,6 +10,7 @@ export const HomePage = () => {
             </header>
             <main>
                 <Day/>
+                <Days />
             </main>
         </>
     )
