@@ -2,4 +2,30 @@
 $black: #000000;
 $blue: #4793FF;
 $white: #FFFFFF;
-$light-grey: #939CB0
+$light-grey: #939CB0;
+$light-black: #2E3035;
+$grey: #4F4F4F;
+
+$light-blue: rgba(71, 147, 255, 0.2);
+
+:root {
+  //theme
+  --theme-background-dark: #{$black};
+  --theme-background-light: #{$white};
+  --theme-background-default: var(#{--theme-background-dark});
+
+  //block
+  --block-color-dark: #{$grey};
+  --block-color-white: #{white};
+  --block-color-default: var(#{--block-color-dark});
+
+  //text
+  --text-color-dark: #{$white};
+  --text-color-white: #{$black};
+  --text-color-default: var(#{--text-color-white});
+
+  //card
+  --card-background-dark: #{$light-black};
+  --card-background-light: #{$light-blue};
+  --card-background-default: var(#{--card-background-dark})
+}

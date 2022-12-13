@@ -7,7 +7,7 @@ export const WeatherSvgSelector = ({id}: SvgSelector) => {
         case "temp":
             return (
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="weather-item__icon">
-                    <g clip-path="url(#clip0_2_133)">
+                    <g clipPath="url(#clip0_2_133)">
                         <path d="M15.4056 2.98156H19.1057C19.308 2.98156 19.4719 2.81759 19.4719 2.61533C19.4719 2.41308 19.308 2.24911 19.1057 2.24911H15.4056C15.2033 2.24911 15.0394 2.41308 15.0394 2.61533C15.0394 2.81759 15.2034 2.98156 15.4056 2.98156Z" fill="#4F667A"/>
                         <path d="M15.4056 4.67249H17.2556C17.4579 4.67249 17.6219 4.50852 17.6219 4.30627C17.6219 4.10401 17.4579 3.94004 17.2556 3.94004H15.4056C15.2033 3.94004 15.0394 4.10401 15.0394 4.30627C15.0394 4.50852 15.2034 4.67249 15.4056 4.67249Z" fill="#4F667A"/>
                         <path d="M19.1064 5.64909H15.4063C15.204 5.64909 15.0401 5.81306 15.0401 6.01532C15.0401 6.21757 15.204 6.38154 15.4063 6.38154H19.1064C19.3087 6.38154 19.4726 6.21757 19.4726 6.01532C19.4726 5.81306 19.3086 5.64909 19.1064 5.64909Z" fill="#4F667A"/>
@@ -33,7 +33,7 @@ export const WeatherSvgSelector = ({id}: SvgSelector) => {
         case "pressure":
             return(
                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" className="weather-item__icon">
-                    <g clip-path="url(#clip0_2_124)">
+                    <g clipPath="url(#clip0_2_124)">
                         <path d="M10.1345 0.281303C9.81729 -0.0359516 9.34139 -0.115293 8.94479 0.201998C8.94479 0.201998 8.86549 0.201998 8.86549 0.281303C8.23094 1.07446 2.3615 8.21295 2.3615 11.8615C2.3615 15.8274 5.53416 19 9.5 19C13.4658 19 16.6385 15.8274 16.6385 11.8615C16.6385 8.21295 10.7691 1.07446 10.1345 0.281303Z" fill="url(#paint0_linear_2_124)"/>
                         <path d="M7.70508 13.9841L12.4723 9.21692L11.3506 8.09524L6.58341 12.8624L7.70508 13.9841Z" fill="white"/>
                         <path d="M7.12049 10.2752C7.55853 10.2752 7.91364 9.92004 7.91364 9.482C7.91364 9.04395 7.55853 8.68884 7.12049 8.68884C6.68244 8.68884 6.32733 9.04395 6.32733 9.482C6.32733 9.92004 6.68244 10.2752 7.12049 10.2752Z" fill="white"/>
@@ -41,8 +41,8 @@ export const WeatherSvgSelector = ({id}: SvgSelector) => {
                     </g>
                     <defs>
                         <linearGradient id="paint0_linear_2_124" x1="3.90805" y1="16.383" x2="15.0729" y2="5.22218" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#34CDFA"/>
-                            <stop offset="1" stop-color="#E8D9F1"/>
+                            <stop stopColor="#34CDFA"/>
+                            <stop offset="1" stopColor="#E8D9F1"/>
                         </linearGradient>
                         <clipPath id="clip0_2_124">
                             <rect width="19" height="19" fill="white"/>
@@ -80,8 +80,8 @@ export const WeatherSvgSelector = ({id}: SvgSelector) => {
                     <path d="M34.8135 2.40051L32.1118 8.92324C31.2312 11.0477 28.0444 9.72795 28.925 7.60352L31.6267 1.08079C32.5073 -1.04363 35.6941 0.276087 34.8135 2.40051ZM19.0727 40.3988L16.371 46.9215C15.4904 49.0459 12.3036 47.7262 13.1842 45.6018L15.8859 39.0791C16.7665 36.9546 19.9533 38.2743 19.0727 40.3988ZM46.9215 16.3748L40.3984 19.0763C38.2739 19.9569 36.9541 16.7703 39.0786 15.8897L45.6017 13.1882C47.7262 12.3076 49.046 15.4942 46.9215 16.3748ZM8.92137 32.1149L2.39833 34.8164C0.273802 35.697 -1.04598 32.5104 1.07855 31.6298L7.60158 28.9283C9.72611 28.0477 11.0459 31.2343 8.92137 32.1149ZM45.6017 34.8187L39.0786 32.1172C36.9541 31.2366 38.2739 28.05 40.3984 28.9306L46.9215 31.6321C49.046 32.5127 47.7262 35.6993 45.6017 34.8187ZM7.60158 19.0786L1.07855 16.3771C-1.04598 15.4965 0.273802 12.3099 2.39833 13.1905L8.92137 15.892C11.0459 16.7726 9.72611 19.9592 7.60158 19.0786ZM16.3687 1.0785L19.0704 7.60122C19.951 9.72565 16.7642 11.0454 15.8836 8.92094L13.1819 2.39821C12.3013 0.273788 15.4881 -1.04593 16.3687 1.0785ZM32.1095 39.0768L34.8112 45.5995C35.6918 47.7239 32.505 49.0436 31.6244 46.9192L28.9227 40.3965C28.0421 38.2721 31.2289 36.9523 32.1095 39.0768Z" fill="#FFB300"/>
                     <defs>
                         <linearGradient id="paint0_linear_2_547" x1="24.0092" y1="12.5099" x2="24.0092" y2="35.1951" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#FFC227"/>
-                            <stop offset="1" stop-color="#FFB300"/>
+                            <stop stopColor="#FFC227"/>
+                            <stop offset="1" stopColor="#FFB300"/>
                         </linearGradient>
                     </defs>
                 </svg>
@@ -96,16 +96,16 @@ export const WeatherSvgSelector = ({id}: SvgSelector) => {
                     <path d="M14 21C14 25.97 18.03 30 23 30C27.502 30 31.23 26.696 31.894 22.38C32.55 22.134 33.258 22 34 22C37.314 22 40 24.686 40 28C40 31.314 37.314 34 34 34H12C7.582 34 4 30.418 4 26C4 21.582 7.582 18 12 18C12.834 18 13.636 18.128 14.392 18.364C14.136 19.198 14 20.082 14 21Z" fill="url(#paint2_radial_2_530)"/>
                     <defs>
                         <linearGradient id="paint0_linear_2_530" x1="40" y1="8" x2="28.7832" y2="19.0723" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#FFB301"/>
-                            <stop offset="1" stop-color="#FFC533"/>
+                            <stop stopColor="#FFB301"/>
+                            <stop offset="1" stopColor="#FFC533"/>
                         </linearGradient>
                         <linearGradient id="paint1_linear_2_530" x1="22" y1="12" x2="22" y2="34" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#9FC7FF"/>
-                            <stop offset="1" stop-color="#9BC1F5"/>
+                            <stop stopColor="#9FC7FF"/>
+                            <stop offset="1" stopColor="#9BC1F5"/>
                         </linearGradient>
                         <radialGradient id="paint2_radial_2_530" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(15.0679 -22.6966) rotate(-90) scale(20.9574 6.69705)">
-                            <stop stop-color="#486DA8" stop-opacity="0.4"/>
-                            <stop offset="1" stop-color="#486DA8" stop-opacity="0"/>
+                            <stop stopColor="#486DA8" stopOpacity="0.4"/>
+                            <stop offset="1" stopColor="#486DA8" stopOpacity="0"/>
                         </radialGradient>
                     </defs>
                 </svg>
@@ -118,12 +118,12 @@ export const WeatherSvgSelector = ({id}: SvgSelector) => {
                     <path d="M16 15C16 19.97 20.03 24 25 24C29.502 24 33.23 20.696 33.894 16.38C34.55 16.134 35.258 16 36 16C39.314 16 42 18.686 42 22C42 25.314 39.314 28 36 28H14C9.582 28 6 24.418 6 20C6 15.582 9.582 12 14 12C14.834 12 15.636 12.128 16.392 12.364C16.136 13.198 16 14.082 16 15Z" fill="url(#paint1_radial_2_537)"/>
                     <defs>
                         <linearGradient id="paint0_linear_2_537" x1="24" y1="6" x2="24" y2="28" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#9FC7FF"/>
-                            <stop offset="1" stop-color="#9BC1F5"/>
+                            <stop stopColor="#9FC7FF"/>
+                            <stop offset="1" stopColor="#9BC1F5"/>
                         </linearGradient>
                         <radialGradient id="paint1_radial_2_537" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.7539 -24.6966) rotate(-90) scale(20.9574 6.69705)">
-                            <stop stop-color="#486DA8" stop-opacity="0.4"/>
-                            <stop offset="1" stop-color="#486DA8" stop-opacity="0"/>
+                            <stop stopColor="#486DA8" stopOpacity="0.4"/>
+                            <stop offset="1" stopColor="#486DA8" stopOpacity="0"/>
                         </radialGradient>
                     </defs>
                 </svg>
@@ -136,12 +136,12 @@ export const WeatherSvgSelector = ({id}: SvgSelector) => {
                     <path d="M16 15C16 19.97 20.03 24 25 24C29.502 24 33.23 20.696 33.894 16.38C34.55 16.134 35.258 16 36 16C39.314 16 42 18.686 42 22C42 25.314 39.314 28 36 28H14C9.582 28 6 24.418 6 20C6 15.582 9.582 12 14 12C14.834 12 15.636 12.128 16.392 12.364C16.136 13.198 16 14.082 16 15Z" fill="url(#paint1_radial_2_525)"/>
                     <defs>
                         <linearGradient id="paint0_linear_2_525" x1="24" y1="6" x2="24" y2="28" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#9FC7FF"/>
-                            <stop offset="1" stop-color="#9BC1F5"/>
+                            <stop stopColor="#9FC7FF"/>
+                            <stop offset="1" stopColor="#9BC1F5"/>
                         </linearGradient>
                         <radialGradient id="paint1_radial_2_525" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(10.7539 -24.6966) rotate(-90) scale(20.9574 6.69705)">
-                            <stop stop-color="#486DA8" stop-opacity="0.4"/>
-                            <stop offset="1" stop-color="#486DA8" stop-opacity="0"/>
+                            <stop stopColor="#486DA8" stopOpacity="0.4"/>
+                            <stop offset="1" stopColor="#486DA8" stopOpacity="0"/>
                         </radialGradient>
                     </defs>
                 </svg>
@@ -154,12 +154,12 @@ export const WeatherSvgSelector = ({id}: SvgSelector) => {
                     <path d="M14 25C14 29.97 18.03 34 23 34C27.502 34 31.23 30.696 31.894 26.38C32.55 26.134 33.258 26 34 26C37.314 26 40 28.686 40 32C40 35.314 37.314 38 34 38H12C7.582 38 4 34.418 4 30C4 25.582 7.582 22 12 22C12.834 22 13.636 22.128 14.392 22.364C14.136 23.198 14 24.082 14 25Z" fill="url(#paint1_radial_2_550)"/>
                     <defs>
                         <linearGradient id="paint0_linear_2_550" x1="22" y1="16" x2="22" y2="38" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#9FC7FF"/>
-                            <stop offset="1" stop-color="#9BC1F5"/>
+                            <stop stopColor="#9FC7FF"/>
+                            <stop offset="1" stopColor="#9BC1F5"/>
                         </linearGradient>
                         <radialGradient id="paint1_radial_2_550" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(17.9439 -22.6966) rotate(-90) scale(20.9574 6.69705)">
-                            <stop stop-color="#486DA8" stop-opacity="0.4"/>
-                            <stop offset="1" stop-color="#486DA8" stop-opacity="0"/>
+                            <stop stopColor="#486DA8" stopOpacity="0.4"/>
+                            <stop offset="1" stopColor="#486DA8" stopOpacity="0"/>
                         </radialGradient>
                     </defs>
                 </svg>

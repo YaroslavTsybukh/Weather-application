@@ -6,6 +6,7 @@ import cloud from "../../../assets/image/cloud.png";
 import "./dayInfo.scss"
 
 export interface WeatherInfo {
+    "id": number,
     "icon_id": string,
     "name": string,
     "value": string
@@ -14,21 +15,25 @@ export interface WeatherInfo {
 export const DayInfo = () => {
     const weatherInfo: WeatherInfo[] = [
         {
+            "id": 1,
             "icon_id": "temp",
             "name": "Температура",
             "value": "20° - ощущается как 17°",
         },
         {
+            "id": 2,
             "icon_id": "pressure",
             "name": "Давление ",
             "value": "765 мм ртутного столба - нормальное",
         },
         {
+            "id": 3,
             "icon_id": "precipitation",
             "name": "Осадки",
             "value": "Без осадков",
         },
         {
+            "id": 4,
             "icon_id": "wind",
             "name": "Ветер",
             "value": "3 м/с юго-запад - легкий ветер",
@@ -39,7 +44,7 @@ export const DayInfo = () => {
             <div className="weather-item-wrapper">
                 {
                     weatherInfo.map(info => (
-                        <DayInfoItem weather={info}/>
+                        <DayInfoItem key={info.id} weather={info}/>
                     ))
                 }
             </div>

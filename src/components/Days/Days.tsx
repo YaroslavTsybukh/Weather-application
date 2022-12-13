@@ -4,6 +4,7 @@ import {WeatherCard} from "./Card/Card";
 import "./days.scss"
 
 export interface Day {
+    id: number,
     day: string,
     day_info: string,
     icon_id: string,
@@ -16,6 +17,7 @@ export const Days = () => {
 
     const days: Day[] = [
         {
+            id: 1,
             day: 'Сегодня',
             day_info: '28 авг',
             icon_id: 'sun',
@@ -24,6 +26,7 @@ export const Days = () => {
             info: 'Ясно',
         },
         {
+            id: 2,
             day: 'Завтра',
             day_info: '29 авг',
             icon_id: 'small_rain_sun',
@@ -32,6 +35,7 @@ export const Days = () => {
             info: 'Облачно',
         },
         {
+            id: 3,
             day: 'Ср',
             day_info: '30 авг',
             icon_id: 'small_rain',
@@ -40,6 +44,7 @@ export const Days = () => {
             info: 'Небольшой дождь',
         },
         {
+            id: 4,
             day: 'Чт',
             day_info: '28 авг',
             icon_id: 'mainly_cloudy',
@@ -48,6 +53,7 @@ export const Days = () => {
             info: 'Пасмурно',
         },
         {
+            id: 5,
             day: 'Пт',
             day_info: '28 авг',
             icon_id: 'rain',
@@ -56,6 +62,7 @@ export const Days = () => {
             info: 'Дождь',
         },
         {
+            id: 6,
             day: 'Сб',
             day_info: '28 авг',
             icon_id: 'sun',
@@ -64,6 +71,7 @@ export const Days = () => {
             info: 'Ясно',
         },
         {
+            id: 7,
             day: 'Вс',
             day_info: '28 авг',
             icon_id: 'sun',
@@ -80,7 +88,7 @@ export const Days = () => {
                 <div className="days-weather">
                     {
                         days.map(day => (
-                            <WeatherCard dayInfo={day}/>
+                            <WeatherCard key={day.id} dayInfo={day}/>
                         ))
                     }
                 </div>
