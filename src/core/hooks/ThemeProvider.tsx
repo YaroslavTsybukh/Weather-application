@@ -1,4 +1,4 @@
-import {Theme, ThemeContext} from "../context/ThemeContext";
+import {Theme, ThemeContext} from "../../context/ThemeContext";
 import {ReactNode, useState} from "react";
 
 const {Provider} = ThemeContext

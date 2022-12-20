@@ -81,6 +81,8 @@ export const Days = () => {
         },
     ];
 
+
+
     return (
         <div className="container">
             <div className="days-weather-wrapper">

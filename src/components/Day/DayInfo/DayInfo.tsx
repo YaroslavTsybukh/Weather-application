@@ -1,9 +1,12 @@
-import {WeatherSvgSelector} from "../../../assets/icons/weather/WeahertSvgSelector";
 import {DayInfoItem} from "./DayInfoItem";
 
 import cloud from "../../../assets/image/cloud.png";
 
 import "./dayInfo.scss"
+
+interface Props {
+    weatherData: any
+}
 
 export interface WeatherInfo {
     "id": number,
@@ -12,33 +15,34 @@ export interface WeatherInfo {
     "value": string
 }
 
-export const DayInfo = () => {
+export const DayInfo = ({weatherData}: Props) => {
     const weatherInfo: WeatherInfo[] = [
         {
             "id": 1,
             "icon_id": "temp",
             "name": "Температура",
-            "value": "20° - ощущается как 17°",
+            "value": `${Math.round(weatherData.main.temp)}° - ощущается как ${Math.round(weatherData.main.feels_like)}°`,
         },
         {
             "id": 2,
             "icon_id": "pressure",
             "name": "Давление ",
-            "value": "765 мм ртутного столба - нормальное",
+            "value": `${Math.round(weatherData.main.pressure)} мм ртутного столба - нормальное`,
         },
         {
             "id": 3,
             "icon_id": "precipitation",
             "name": "Осадки",
-            "value": "Без осадков",
+            "value": `${weatherData.weather[0].description}`,
         },
         {
             "id": 4,
             "icon_id": "wind",
             "name": "Ветер",
-            "value": "3 м/с юго-запад - легкий ветер",
+            "value": ` ${weatherData.wind.speed} м/с`,
         }
     ]
+
     return(
         <div className="day-weather day-weather_block_second">
             <div className="weather-item-wrapper">
