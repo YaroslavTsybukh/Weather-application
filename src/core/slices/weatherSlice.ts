@@ -1,12 +1,14 @@
-import {createAsyncThunk , createSlice} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useHTTP} from "../hooks/http.hook"
 
 interface State {
     isLoading: boolean,
+    city: string,
     weatherData: any
 }
 const initialState: State = {
     isLoading: false,
+    city: "Харьков",
     weatherData: {
         weather: [{
             description: ""
@@ -35,7 +37,11 @@ export const currentWeather = createAsyncThunk<any>(
 const weatherDataSlice = createSlice({
     name: "weather",
     initialState,
-    reducers: {},
+    reducers: {
+        fetchCurrentCity: (state , action: PayloadAction<string>) => {
+            state.city = action.payload
+        }
+    },
     extraReducers: (builder) => {
         builder
             .addCase(currentWeather.pending , (state) => {
@@ -47,7 +53,8 @@ const weatherDataSlice = createSlice({
             })
     }
 })
-
+export const {actions: {fetchCurrentCity}} = weatherDataSlice
 export const {reducer} = weatherDataSlice
+
 
 

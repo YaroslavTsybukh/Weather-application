@@ -1,11 +1,19 @@
 import {GlobalSvgSelector} from "../../assets/icons/global/GlobalSvgSelector";
 import Select from "react-select"
-import {useContext, useEffect} from "react"
+import {useContext, useEffect, useState} from "react"
 import {Theme, ThemeContext} from "../../context/ThemeContext";
+import {fetchCurrentCity} from "../../core/slices/weatherSlice";
+import {useAppDispatch} from "../../core/hooks/hooks";
 
 import "./header.scss"
 
+interface Option {
+    label: string,
+    value: string
+}
+
 export const Header = () => {
+    const dispatch = useAppDispatch()
     const theme = useContext(ThemeContext)
 
     useEffect(() => {
@@ -46,6 +54,13 @@ export const Header = () => {
         theme.changeTheme(theme.theme == Theme.Light ? Theme.Dark : Theme.Light)
     }
 
+    const handleChange = (data: Option | null): void => {
+        if(data){
+            const {label} = data
+            dispatch(fetchCurrentCity(label))
+        }
+    }
+
     return (
         <div className="container">
             <div className="header-wrapper">
@@ -57,7 +72,12 @@ export const Header = () => {
                     <div className="header-block__theme-color" onClick={changeThemeColor}>
                         <GlobalSvgSelector id={"theme-color"} />
                     </div>
-                    <Select options={options} styles={colorStyles} className="header-block__select-city" />
+                    <Select options={options}
+                            styles={colorStyles}
+                            defaultValue={{value: "Kharkov" , label: "Харьков"}}
+                            onChange={handleChange}
+                            className="header-block__select-city"
+                    />
                 </div>
             </div>
         </div>

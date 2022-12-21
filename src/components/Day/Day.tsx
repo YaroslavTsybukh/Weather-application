@@ -7,7 +7,7 @@ import './day.scss'
 
 export const Day = () => {
     const [date , setDate] = useState<string>("00:00:00")
-    const {weatherData} = useAppSelector(state => state.weather)
+    const {weatherData , city} = useAppSelector(state => state.weather)
 
     useEffect(() => {
         updateDate()
@@ -41,7 +41,7 @@ export const Day = () => {
                         <p className="day-weather-info__temperature">{Math.round(weatherData.main.temp)}°</p>
                         <p className="day-weather-info__day">Сегодня</p>
                         <p className="day-weather-info__time">Время: {date}</p>
-                        <p className="day-weather-info__city">Город: Харьков</p>
+                        <p className="day-weather-info__city">Город: {city}</p>
                     </div>
                     <GlobalSvgSelector id={"weather-day"}/>
                 </div>
