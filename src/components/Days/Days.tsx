@@ -20,7 +20,7 @@ export const Days = () => {
             id: 1,
             day: 'Сегодня',
             day_info: '28 авг',
-            icon_id: 'sun',
+            icon_id: 'Clear',
             temp_day: '+18',
             temp_night: '+15',
             info: 'Ясно',
@@ -29,7 +29,7 @@ export const Days = () => {
             id: 2,
             day: 'Завтра',
             day_info: '29 авг',
-            icon_id: 'small_rain_sun',
+            icon_id: 'Drizzle',
             temp_day: '+18',
             temp_night: '+15',
             info: 'Облачно',
@@ -38,7 +38,7 @@ export const Days = () => {
             id: 3,
             day: 'Ср',
             day_info: '30 авг',
-            icon_id: 'small_rain',
+            icon_id: 'Drizzle',
             temp_day: '+18',
             temp_night: '+15',
             info: 'Небольшой дождь',
@@ -47,7 +47,7 @@ export const Days = () => {
             id: 4,
             day: 'Чт',
             day_info: '28 авг',
-            icon_id: 'mainly_cloudy',
+            icon_id: 'Clouds',
             temp_day: '+18',
             temp_night: '+15',
             info: 'Пасмурно',
@@ -56,7 +56,7 @@ export const Days = () => {
             id: 5,
             day: 'Пт',
             day_info: '28 авг',
-            icon_id: 'rain',
+            icon_id: 'Rain',
             temp_day: '+18',
             temp_night: '+15',
             info: 'Дождь',
@@ -65,7 +65,7 @@ export const Days = () => {
             id: 6,
             day: 'Сб',
             day_info: '28 авг',
-            icon_id: 'sun',
+            icon_id: 'Clear',
             temp_day: '+18',
             temp_night: '+15',
             info: 'Ясно',
@@ -74,7 +74,7 @@ export const Days = () => {
             id: 7,
             day: 'Вс',
             day_info: '28 авг',
-            icon_id: 'sun',
+            icon_id: 'Snow',
             temp_day: '+18',
             temp_night: '+15',
             info: 'Ясно',
@@ -84,16 +84,14 @@ export const Days = () => {
 
 
     return (
-        <div className="container">
-            <div className="days-weather-wrapper">
-                <Filters />
-                <div className="days-weather">
-                    {
-                        days.map(day => (
-                            <WeatherCard key={day.id} dayInfo={day}/>
-                        ))
-                    }
-                </div>
+        <div className="days-weather-wrapper">
+            <Filters />
+            <div className="days-weather">
+                {
+                    days.map(day => (
+                        <WeatherCard key={day.id} dayInfo={day}/>
+                    ))
+                }
             </div>
         </div>
     )

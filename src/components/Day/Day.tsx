@@ -1,13 +1,13 @@
 import {GlobalSvgSelector} from "../../assets/icons/global/GlobalSvgSelector";
 import {DayInfo} from "./DayInfo/DayInfo";
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import {useAppSelector} from "../../core/hooks/hooks";
 
 import './day.scss'
 
 export const Day = () => {
     const [date , setDate] = useState<string>("00:00:00")
-    const {weatherData , city} = useAppSelector(state => state.weather)
+    const {weatherCurrentData} = useAppSelector(state => state.weather)
 
     useEffect(() => {
         updateDate()
@@ -33,20 +33,23 @@ export const Day = () => {
         } , 1000)
     }
 
+    const weatherData = useMemo(() => {
+        console.log(weatherCurrentData.weather[0].main)
+        return <GlobalSvgSelector id={weatherCurrentData.weather[0].main}/>
+    }, [weatherCurrentData.weather[0].main])
+
     return(
-        <div className="container">
-            <div className="day-weather-wrapper">
-                <div className="day-weather day-weather_block_first">
-                    <div className="day-weather-info">
-                        <p className="day-weather-info__temperature">{Math.round(weatherData.main.temp)}°</p>
-                        <p className="day-weather-info__day">Сегодня</p>
-                        <p className="day-weather-info__time">Время: {date}</p>
-                        <p className="day-weather-info__city">Город: {city}</p>
-                    </div>
-                    <GlobalSvgSelector id={"weather-day"}/>
+        <div className="day-weather-wrapper">
+            <div className="day-weather day-weather_block_first">
+                <div className="day-weather-info">
+                    <p className="day-weather-info__temperature">{Math.round(weatherCurrentData.main.temp)}°</p>
+                    <p className="day-weather-info__day">Сегодня</p>
+                    <p className="day-weather-info__time">Время: {date}</p>
+                    <p className="day-weather-info__city">Город: {weatherCurrentData.name}</p>
                 </div>
-                <DayInfo weatherData={weatherData}/>
+                {weatherData}
             </div>
+            <DayInfo weatherData={weatherCurrentData}/>
         </div>
     )
 }

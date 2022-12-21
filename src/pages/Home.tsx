@@ -7,12 +7,12 @@ import {useEffect} from "react";
 import {currentWeather} from "../core/slices/weatherSlice";
 
 export const HomePage = () => {
-    const {isLoading} = useAppSelector(state => state.weather)
+    const {isLoading , weatherCurrentData: {name}} = useAppSelector(state => state.weather)
     const dispatch = useAppDispatch()
 
     useEffect(() => {
-        dispatch(currentWeather())
-    } ,[])
+        dispatch(currentWeather(name))
+    } ,[name])
 
     return (
         <>
@@ -21,10 +21,10 @@ export const HomePage = () => {
             </header>
             <main>
                 {isLoading ? <Spinner/> :
-                    <>
+                    <div className="container">
                         <Day/>
                         <Days />
-                    </>
+                    </div>
                 }
             </main>
         </>

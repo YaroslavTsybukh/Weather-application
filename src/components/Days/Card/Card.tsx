@@ -1,4 +1,4 @@
-import {WeatherSvgSelector} from "../../../assets/icons/weather/WeahertSvgSelector";
+import {WeatherSvgSelector} from "../../../assets/icons/weather/WeatherSvgSelector";
 import {Day} from "../Days";
 
 import "./card.scss"
