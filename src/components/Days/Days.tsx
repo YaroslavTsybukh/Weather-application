@@ -1,4 +1,3 @@
-import {Filters} from "./Filters/Filters";
 import {WeatherCard} from "./Card/Card";
 import {useAppSelector} from "../../core/hooks/hooks";
 import { v4 as uuidv4 } from 'uuid';
@@ -59,7 +58,6 @@ export const Days = () => {
 
     return (
         <div className="days-weather-wrapper">
-            <Filters />
             <div className="days-weather">
                 {
                     daysArr.map((day) => (
