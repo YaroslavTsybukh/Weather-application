@@ -45,6 +45,8 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.56.1"
+    "@types/uuid": "^9.0.0",
+    "sass": "^1.56.1",
+    "uuid": "^9.0.0"
   }
 }

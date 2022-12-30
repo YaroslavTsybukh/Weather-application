@@ -2,7 +2,7 @@ import {GlobalSvgSelector} from "../../assets/icons/global/GlobalSvgSelector";
 import Select from "react-select"
 import {useContext, useEffect, useState} from "react"
 import {Theme, ThemeContext} from "../../context/ThemeContext";
-import {fetchCurrentCity} from "../../core/slices/weatherSlice";
+import {fetchCity} from "../../core/slices/weatherSlice";
 import {useAppDispatch} from "../../core/hooks/hooks";
 
 import "./header.scss"
@@ -44,20 +44,20 @@ export const Header = () => {
             borderRadius: "10px",
             width: "194px",
         }),
-        placeholder: (styles: any) => ({
+        singleValue: (styles: any) => ({
             ...styles,
             color: theme.theme == "dark" ? "white" : "black",
         })
     }
 
-    const changeThemeColor = () => {
+    const changeThemeColor = (): void => {
         theme.changeTheme(theme.theme == Theme.Light ? Theme.Dark : Theme.Light)
     }
 
     const handleChange = (data: Option | null): void => {
         if(data){
             const {label} = data
-            dispatch(fetchCurrentCity(label))
+            dispatch(fetchCity(label))
         }
     }
 

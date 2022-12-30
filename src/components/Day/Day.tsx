@@ -34,7 +34,6 @@ export const Day = () => {
     }
 
     const weatherData = useMemo(() => {
-        console.log(weatherCurrentData.weather[0].main)
         return <GlobalSvgSelector id={weatherCurrentData.weather[0].main}/>
     }, [weatherCurrentData.weather[0].main])
 

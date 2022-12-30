@@ -4,15 +4,19 @@ import {Days} from "../components/Days/Days"
 import {Spinner} from "../components/Spinner/Spinner"
 import {useAppDispatch, useAppSelector} from "../core/hooks/hooks";
 import {useEffect} from "react";
-import {currentWeather} from "../core/slices/weatherSlice";
+import {currentWeather, forecastDataWeather} from "../core/slices/weatherSlice";
 
 export const HomePage = () => {
-    const {isLoading , weatherCurrentData: {name}} = useAppSelector(state => state.weather)
+    const {isLoading , weatherCurrentData: {name} , weatherForecastData: {city}} = useAppSelector(state => state.weather)
     const dispatch = useAppDispatch()
 
     useEffect(() => {
         dispatch(currentWeather(name))
     } ,[name])
+
+    useEffect(() => {
+        dispatch(forecastDataWeather(city.name))
+    },[city.name])
 
     return (
         <>
