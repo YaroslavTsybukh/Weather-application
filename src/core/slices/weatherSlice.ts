@@ -4,7 +4,8 @@ import {useHTTP} from "../hooks/http.hook"
 interface State {
     isLoading: boolean,
     weatherCurrentData: any,
-    weatherForecastData: any
+    weatherForecastData: any,
+    selectedDate: number
 }
 const initialState: State = {
     isLoading: false,
@@ -43,7 +44,8 @@ const initialState: State = {
         city: {
             name: "Харьков"
         }
-    }
+    },
+    selectedDate: 0
 }
 
 export const currentWeather = createAsyncThunk<any , string>(
@@ -68,6 +70,9 @@ const weatherDataSlice = createSlice({
         fetchCity: (state , action: PayloadAction<string>) => {
             state.weatherCurrentData.name = action.payload
             state.weatherForecastData.city.name = action.payload
+        },
+        selectedDate: (state , action: PayloadAction<number>) => {
+            state.selectedDate = action.payload
         }
     },
     extraReducers: (builder) => {
@@ -88,7 +93,7 @@ const weatherDataSlice = createSlice({
             })
     }
 })
-export const {actions: {fetchCity}} = weatherDataSlice
+export const {actions: {fetchCity , selectedDate}} = weatherDataSlice
 export const {reducer} = weatherDataSlice
 
 

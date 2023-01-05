@@ -12,20 +12,20 @@ $light-blue: rgba(71, 147, 255, 0.2);
   //theme
   --theme-background-dark: #{$black};
   --theme-background-light: #{$white};
-  --theme-background-default: var(#{--theme-background-dark});
+  --theme-background-default: var(#{--theme-background-light});
 
   //block
   --block-color-dark: #{$grey};
-  --block-color-white: #{white};
-  --block-color-default: var(#{--block-color-dark});
+  --block-color-light: #{$white};
+  --block-color-default: var(#{--block-color-light});
 
   //text
   --text-color-dark: #{$white};
-  --text-color-white: #{$black};
-  --text-color-default: var(#{--text-color-white});
+  --text-color-light: #{$black};
+  --text-color-default: var(#{--text-color-light});
 
   //card
   --card-background-dark: #{$light-black};
   --card-background-light: #{$light-blue};
-  --card-background-default: var(#{--card-background-dark})
+  --card-background-default: var(#{--card-background-light})
 }

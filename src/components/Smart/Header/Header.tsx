@@ -1,9 +1,9 @@
-import {GlobalSvgSelector} from "../../assets/icons/global/GlobalSvgSelector";
+import {GlobalSvgSelector} from "../../../assets/icons/global/GlobalSvgSelector";
 import Select from "react-select"
-import {useContext, useEffect, useState} from "react"
-import {Theme, ThemeContext} from "../../context/ThemeContext";
-import {fetchCity} from "../../core/slices/weatherSlice";
-import {useAppDispatch} from "../../core/hooks/hooks";
+import {useContext, useEffect} from "react"
+import {Theme, ThemeContext} from "../../../context/ThemeContext";
+import {fetchCity} from "../../../core/slices/weatherSlice";
+import {useAppDispatch} from "../../../core/hooks/hooks";
 
 import "./header.scss"
 

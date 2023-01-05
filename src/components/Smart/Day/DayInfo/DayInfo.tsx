@@ -1,6 +1,6 @@
 import {DayInfoItem} from "./DayInfoItem";
 
-import cloud from "../../../assets/image/cloud.png";
+import cloud from "../../../../assets/image/cloud.png";
 
 import "./dayInfo.scss"
 

@@ -1,9 +1,13 @@
-@import "../../../styles/variables.scss";
+@import "../../../../styles/variables.scss";
 
 .days-weather-info {
   width: 149px;
   background: var(#{--card-background-default});
   border-radius: 10px;
+
+  &_fixed {
+    height: 247px;
+  }
 
   .days-weather-info__day {
     font-weight: 500;
@@ -17,6 +21,10 @@
     line-height: 17px;
     color: $light-grey;
     margin: 0 0 12px 11px;
+  }
+
+  .days-weather-info__time {
+    @extend .days-weather-info__date
   }
 
   .days-weather-info__icon {

@@ -1,7 +1,7 @@
-import {Header} from "../components/Header/Header";
-import {Day} from "../components/Day/Day"
-import {Days} from "../components/Days/Days"
-import {Spinner} from "../components/Spinner/Spinner"
+import {Header} from "../components/Smart/Header/Header";
+import {Day} from "../components/Smart/Day/Day"
+import {Days} from "../components/Smart/Days/Days"
+import {Spinner} from "../components/Simple/Spinner/Spinner"
 import {useAppDispatch, useAppSelector} from "../core/hooks/hooks";
 import {useEffect} from "react";
 import {currentWeather, forecastDataWeather} from "../core/slices/weatherSlice";

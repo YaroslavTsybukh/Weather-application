@@ -1,0 +1,30 @@
+@import "../../../styles/variables.scss";
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(38, 34, 34, 0.7);;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .modal-block {
+    background: var(#{--block-color-default});
+    width: 500px;
+    height: 370px;
+    border-radius: 30px;
+    padding: 0 20px;
+
+    .modal-block__cross {
+      float: right;
+      width: 13px;
+      height: 13px;
+      cursor: pointer;
+      margin: 20px;
+    }
+  }
+}

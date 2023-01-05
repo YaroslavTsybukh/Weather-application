@@ -1,7 +1,8 @@
-import {GlobalSvgSelector} from "../../assets/icons/global/GlobalSvgSelector";
+import {GlobalSvgSelector} from "../../../assets/icons/global/GlobalSvgSelector";
 import {DayInfo} from "./DayInfo/DayInfo";
 import {useEffect, useMemo, useState} from "react";
-import {useAppSelector} from "../../core/hooks/hooks";
+import {useAppSelector} from "../../../core/hooks/hooks";
+import {setZero} from "../../../core/utils/setZero";
 
 import './day.scss'
 
@@ -14,19 +15,12 @@ export const Day = () => {
     } , [date])
 
     const updateDate = () => {
-        const addZero = (num: number) => {
-            if(num < 10){
-                return `0${num}`
-            }else{
-                return num
-            }
-        }
 
         setInterval(() => {
             const date = new Date()
-            const hours = addZero(date.getHours())
-            const minutes = addZero(date.getMinutes())
-            const seconds = addZero(date.getSeconds())
+            const hours = setZero(date.getHours())
+            const minutes = setZero(date.getMinutes())
+            const seconds = setZero(date.getSeconds())
 
             const time = hours + ":" + minutes + ":" + seconds
             setDate(time)
