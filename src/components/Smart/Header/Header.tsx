@@ -1,18 +1,20 @@
 import {GlobalSvgSelector} from "../../../assets/icons/global/GlobalSvgSelector";
-import Select from "react-select"
-import {useContext, useEffect} from "react"
+import {useContext, useEffect , ChangeEvent ,KeyboardEvent, useState} from "react"
 import {Theme, ThemeContext} from "../../../context/ThemeContext";
 import {fetchCity} from "../../../core/slices/weatherSlice";
 import {useAppDispatch} from "../../../core/hooks/hooks";
+import TextField from '@mui/material/TextField';
+import {styled} from '@mui/material/styles';
 
 import "./header.scss"
 
-interface Option {
-    label: string,
-    value: string
+enum Color {
+    Light_Blue = "#4793ff",
+    Grey = "#939CB0"
 }
 
 export const Header = () => {
+    const [text , setText] = useState("")
     const dispatch = useAppDispatch()
     const theme = useContext(ThemeContext)
 
@@ -31,34 +33,39 @@ export const Header = () => {
 
     },[theme.theme])
 
-    const options = [
-        { value: 'Kharkov', label: 'Харьков' },
-        { value: 'Gaysin', label: 'Гайсин' },
-        { value: 'Kiev', label: 'Киев' }
-    ]
-
-    const colorStyles = {
-        control: (styles: any) => ({
-            ...styles,
-            backgroundColor: theme.theme == "dark" ? '#4F4F4F' : "rgba(71, 147, 255, 0.2)",
-            borderRadius: "10px",
-            width: "194px",
-        }),
-        singleValue: (styles: any) => ({
-            ...styles,
-            color: theme.theme == "dark" ? "white" : "black",
-        })
-    }
-
     const changeThemeColor = (): void => {
         theme.changeTheme(theme.theme == Theme.Light ? Theme.Dark : Theme.Light)
     }
 
-    const handleChange = (data: Option | null): void => {
-        if(data){
-            const {label} = data
-            dispatch(fetchCity(label))
-        }
+    const CustomTextField = styled(TextField)({
+        'label.Mui-focused': {
+            color: Color.Grey,
+        },
+        'label': {
+            color: theme.theme == "dark" ? 'white' : Color.Grey
+        },
+        '.MuiOutlinedInput-root': {
+            '& fieldset': {
+                borderColor: Color.Light_Blue,
+            },
+            '&:hover fieldset': {
+                borderColor: Color.Light_Blue,
+            },
+            '&.Mui-focused fieldset': {
+                borderColor: Color.Grey,
+            },
+            '& input': {
+                color: Color.Grey,
+            }
+        },
+    });
+
+    const handleChange = (e:ChangeEvent<HTMLInputElement>): void => {
+        setText(e.target.value)
+    }
+
+    const handleKeyboard = (e:KeyboardEvent<HTMLInputElement>): void => {
+        if(e.code == "Enter") dispatch(fetchCity(text))
     }
 
     return (
@@ -72,12 +79,13 @@ export const Header = () => {
                     <div className="header-block__theme-color" onClick={changeThemeColor}>
                         <GlobalSvgSelector id={"theme-color"} />
                     </div>
-                    <Select options={options}
-                            styles={colorStyles}
-                            defaultValue={{value: "Kharkov" , label: "Харьков"}}
-                            onChange={handleChange}
-                            className="header-block__select-city"
-                    />
+                    <CustomTextField  className="header-block__select-city"
+                                      label="Search city"
+                                      type="search"
+                                      value={text}
+                                      autoFocus
+                                      onChange={handleChange}
+                                      onKeyDown={handleKeyboard}/>
                 </div>
             </div>
         </div>

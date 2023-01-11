@@ -1,5 +1,5 @@
 import {createAsyncThunk, createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {useHTTP} from "../hooks/http.hook"
+import {useHTTP} from "../hooks/useHTTP"
 
 interface State {
     isLoading: boolean,
@@ -26,21 +26,7 @@ const initialState: State = {
         timezone: 0,
     },
     weatherForecastData: {
-        list: [
-            // {
-            //     dt: "",
-            //     dt_txt: "",
-            //     main: {
-            //         temp: 0,
-            //         feels_like: 0,
-            //     },
-            //     weather: [{
-            //         main: "",
-            //         description: ""
-            //     }]
-            //
-            // }
-        ],
+        list: [],
         city: {
             name: "Харьков"
         }
@@ -93,8 +79,8 @@ const weatherDataSlice = createSlice({
             })
     }
 })
-export const {actions: {fetchCity , selectedDate}} = weatherDataSlice
-export const {reducer} = weatherDataSlice
+
+export const {actions: {fetchCity , selectedDate} , reducer} = weatherDataSlice
 
 
 

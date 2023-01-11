@@ -1,7 +1,7 @@
 import React from "react";
 import {Pagination} from "swiper";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {TransformedObject} from "../../Days/Days";
+import {TransformedObject} from "../../../../core/hooks/useDate";
 import {WeatherCardView} from "../../../Simple/WeatherCardView";
 
 import 'swiper/scss';

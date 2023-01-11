@@ -27,7 +27,7 @@ export const DayInfo = ({weatherData}: Props) => {
             "id": 2,
             "icon_id": "pressure",
             "name": "Давление ",
-            "value": `${Math.round(weatherData.main.pressure)} мм ртутного столба - нормальное`,
+            "value": `${Math.round(weatherData.main.pressure)} мм ртутного столба`,
         },
         {
             "id": 3,

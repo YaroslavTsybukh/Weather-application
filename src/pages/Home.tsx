@@ -9,7 +9,7 @@ import {currentWeather, forecastDataWeather} from "../core/slices/weatherSlice";
 export const HomePage = () => {
     const {isLoading , weatherCurrentData: {name} , weatherForecastData: {city}} = useAppSelector(state => state.weather)
     const dispatch = useAppDispatch()
-
+    
     useEffect(() => {
         dispatch(currentWeather(name))
     } ,[name])

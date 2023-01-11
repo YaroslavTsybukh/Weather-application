@@ -1,5 +1,5 @@
 import React from "react";
-import {TransformedObject} from "../Days";
+import {TransformedObject} from "../../../../core/hooks/useDate";
 import {useAppDispatch} from "../../../../core/hooks/hooks";
 import {selectedDate} from "../../../../core/slices/weatherSlice";
 import {WeatherCardView} from "../../../Simple/WeatherCardView";
